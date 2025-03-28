@@ -1,63 +1,107 @@
-**Week 6: Testing and Debugging in MERN Applications**
+# MERN Bug Tracker
 
-**Objective:**
+This is a Bug Tracker application built using the MERN stack (MongoDB, Express, React, Node.js). The application allows users to report, view, update, and delete bugs in a project.
 
-- Develop a systematic approach to testing and debugging MERN applications.
-- Implement unit, integration, and component tests for both backend and frontend.
-- Identify and resolve issues using debugging tools and techniques.
+## Features
 
-**Project Suggestion:** Build a "Bug Tracker" application where users can create, update, and track issues in a project. The goal is to integrate testing and debugging best practices to ensure application reliability.
+- Users can report new bugs by filling out a form.
+- Users can view a list of all reported bugs.
+- Users can update the status of bugs (e.g., open, in-progress, resolved).
+- Users can delete bugs.
 
-**Instructions:**
+## Project Structure
 
-1. **Project Setup:**
-   - Create a new project folder called `mern-bug-tracker`.
-   - Set up both backend and frontend environments.
-   - Install necessary dependencies, including testing libraries (Jest, Supertest, React Testing Library).
+```
+mern-bug-tracker
+├── backend                # Backend server
+│   ├── src
+│   │   ├── controllers    # Controllers for handling requests
+│   │   ├── models         # Mongoose models
+│   │   ├── routes         # API routes
+│   │   └── app.js         # Entry point for the backend
+│   ├── tests              # Tests for backend functionality
+│   ├── package.json       # Backend dependencies and scripts
+│   └── README.md          # Documentation for the backend
+├── frontend               # Frontend application
+│   ├── src
+│   │   ├── components      # React components
+│   │   ├── pages          # React pages
+│   │   ├── App.js         # Main App component
+│   │   └── index.js       # Entry point for the frontend
+│   ├── tests              # Tests for frontend components
+│   ├── package.json       # Frontend dependencies and scripts
+│   └── README.md          # Documentation for the frontend
+├── README.md              # Overall project documentation
+└── .gitignore             # Git ignore file
+```
 
-2. **Application Features:**
-   - Users should be able to:
-     - Report new bugs by filling out a form.
-     - View a list of all reported bugs.
-     - Update bug statuses (e.g., open, in-progress, resolved).
-     - Delete bugs.
+## Getting Started
 
-3. **Testing Requirements:**
-   - **Backend:**
-     - Write unit tests for individual helper functions (e.g., validation logic).
-     - Perform integration tests for API routes (e.g., create, update, delete bug endpoints).
-     - Mock database calls using libraries like `jest-mock`.
-   
-   - **Frontend:**
-     - Write unit tests for components (e.g., form validation, button clicks).
-     - Implement integration tests to verify API calls and UI updates.
-     - Ensure proper rendering of UI elements under different states (e.g., empty list, error message).
+### Prerequisites
 
-4. **Debugging Tasks:**
-   - Introduce intentional bugs in the code and utilize:
-     - Console logs for tracking values.
-     - Chrome DevTools for inspecting network requests and component state.
-     - Node.js inspector for debugging server-side code.
-     - Error boundary implementation for React components.
+- Node.js
+- MongoDB
 
-5. **Error Handling Implementation:**
-   - Implement error handling in the backend using Express middleware.
-   - Add client-side error boundaries to capture and gracefully handle crashes.
+### Installation
 
-6. **Documentation:**
-   - Write a `README.md` file that includes:
-     - How to install and run the project.
-     - Steps to run tests and debugging techniques used.
-     - Explanation of the testing approach and coverage.
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   cd mern-bug-tracker
+   ```
 
-7. **Submission:**
-   - Push your code to your GitHub repository.
+2. Set up the backend:
+   - Navigate to the backend directory:
+     ```
+     cd backend
+     ```
+   - Install dependencies:
+     ```
+     npm install
+     ```
 
-**Evaluation Criteria:**
+3. Set up the frontend:
+   - Navigate to the frontend directory:
+     ```
+     cd ../frontend
+     ```
+   - Install dependencies:
+     ```
+     npm install
+     ```
 
-- Comprehensive unit and integration tests.
-- Proper test coverage and documentation.
-- Effective use of debugging techniques.
-- Well-structured and maintainable code.
-- Clear and concise error handling implementation.
+### Running the Application
 
+1. Start the backend server:
+   ```
+   cd backend
+   npm start
+   ```
+
+2. Start the frontend application:
+   ```
+   cd ../frontend
+   npm start
+   ```
+
+### Running Tests
+
+- To run backend tests:
+  ```
+  cd backend
+  npm test
+  ```
+
+- To run frontend tests:
+  ```
+  cd frontend
+  npm test
+  ```
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License.
